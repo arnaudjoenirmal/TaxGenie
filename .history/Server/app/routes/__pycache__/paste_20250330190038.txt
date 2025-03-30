@@ -1,0 +1,33 @@
+{
+  "id": "chatcmpl-0d7be821-4b06-43df-a1df-197fb723c70a",
+  "object": "chat.completion",
+  "created": 1743340843,
+  "model": "llama3-70b-8192",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Here is the extracted data in a structured JSON format:\n\n```\n{\n  \"key_value_pairs\": {\n    \"VALUE ADDED TAX USSD NIP Transfer from:\": \"0703\",\n    \"USSD NIP Transfer from\": \"07034433706 TO\",\n    \"FUNDS TRANSFER\": \"-009251-\",\n    \"ATM/POS ACOUNT TO ACCOUNT TRANSFER\": \"-978298--\",\n    \"TO\": \"DBN/NWANERI ANGUS NNAMDI\",\n    \"Account No:\": \"012345678 - (621/916432/1/13/0)\",\n    \"HASKE\": \"000636245691498822226338096987\",\n    \"Print Date:\": \"16/Mar/2017\",\n    \"Address:\": \"HOUSE 33 ECWA CHURCH STREET MALLAM WNA\",\n    \"Opening Balance:\": \"3,039.82\",\n    \"LIMITED\": \"DREF:000013170310063946000010750550\",\n    \"Currency:Naira\": \"\",\n    \"Period:\": \"01/Mar/2017 To 16/Mar/2017\",\n    \"COMMISSION\": \"000013170306144649000009994924\",\n    \"Transfer from:\": \"07034433706 TO ACCESS/TANSI\",\n    \"FB/CHUKWUALUKAILIEMENE\": \"REF:000013170309113623000010650577\",\n    \"Guaranty Trust\": \"Bank pk\",\n    \"CASH\": \"WITHDRAWAL\",\n    \"NIBSS Instant Payment Outward\": \"000013170306144649000009994924\",\n    \"GTBank\": \"1902 Ahmadu\",\n    \"TO ACCOUNT TRANSFER\": \"Trsf:musaMohammedhaske\",\n    \"RC\": \"152321\",\n    \"TRANSFER BETWEEN CUSTOMERS\": \"000016170301074834000150646887\",\n    \"Smartzee\": \"(haske006@gmail.com)\",\n    \"Jos\": \"PLNG\",\n    \":\": \"\",\n    \"ITAMAN\": \"REF:000013170306144649000009994924\",\n    \"OUR ATM\": \"-001885-\",\n    \"ATM\": \"-004273-\"\n  },\n  \"transactions\": [\n    {\n      \"date\": \"01-Mar-2017\",\n      \"reference\": \"000016170301074834000150646887\",\n      \"debit\": \"5,000.00\",\n      \"credit\": \"\",\n      \"balance\": \"8,039.82\",\n      \"remarks\": \"TRANSFER BETWEEN CUSTOMERS FBNMOBILE:MOHAMMED MUSA HASKE/LIBRACIN 636239513140470886 OGUMGBU CHETACHI SIXTUS to MOHAMMED MUSA HASKE\"\n    },\n    {\n      \"date\": \"01-Mar-2017\",\n      \"reference\": \"3320004273\",\n      \"debit\": \"5,000.00\",\n      \"credit\": \"\",\n      \"balance\": \"3,039.82\",\n      \"remarks\": \"CASH WITHDRAWAL FROM OUR ATM -004273- GTBank 1902 Ahmadu Bello Jos PLNG\"\n    },\n    {\n      \"date\": \"03-Mar-2017\",\n      \"reference\": \"3310001885\",\n      \"debit\": \"3,000.00\",\n      \"credit\": \"\",\n      \"balance\": \"39.82\",\n      \"remarks\": \"CASH WITHDRAWAL FROM OUR ATM -001885- - GTBank Jengre Road JOS 1 PLNG\"\n    },\n    {\n      \"date\": \"06-Mar-2017\",\n      \"reference\": \"9999812087\",\n      \"debit\": \"\",\n      \"credit\": \"20,000.00\",\n      \"balance\": \"20,039.82\",\n      \"remarks\": \"ATM/POS ACOUNT TO ACCOUNT TRANSFER -812087-- 000027102422;Aco Trsf:musaMohammedhaske NIBSS Instant Payment Outward\"\n    },\n    {\n      \"date\": \"06-Mar-2017\",\n      \"reference\": \"000013170306144649000009994924\",\n      \"debit\": \"10,000.00\",\n      \"credit\": \"\",\n      \"balance\": \"10,039.82\",\n      \"remarks\": \"USSD NIP Transfer from : 07034433706 TO ACCESS/TANSI ITAMAN REF:000013170306144649000009994924 COMMISSION 000013170306144649000009994924\"\n    },\n    {\n      \"date\": \"06-Mar-2017\",\n      \"reference\": \"000013170306144649000009994924\",\n      \"debit\": \"100.00\",\n      \"credit\": \"\",\n      \"balance\": \"9,939.82\",\n      \"remarks\": \"USSD NIP Transfer from : 07034433706 TO ACCESS/TANSI ITAMAN REF:000013170306144649000009994924\"\n    },\n    {\n      \"date\": \"06-Mar-2017\",\n      \"reference\": \"000013170306144649000009994924\",\n      \"debit\": \"5.00\",\n      \"credit\": \"\",\n      \"balance\": \"9,934.82\",\n      \"remarks\": \"VALUE ADDED TAX USSD NIP Transfer from : 0703\"\n    },\n    {\n      \"date\": \"08-Mar-2017\",\n      \"reference\": \"9999008430\",\n      \"debit\": \"9,800.00\",\n      \"credit\": \"\",\n      \"balance\": \"134.82\",\n      \"remarks\": \"POS/WEB PURCHASE TRANSACTION -008430- 40252698 www.nairabet.LANG\"\n    },\n    {\n      \"date\": \"08-Mar-2017\",\n      \"reference\": \"\",\n      \"debit\": \"\",\n      \"credit\": \"35,000.00\",\n      \"balance\": \"35,134.82\",\n      \"remarks\": \"FASTTRACK CASH DEPOSIT PINPAD-42220045- 332/8788 CASH DEPOSIT BY MOHAMMED MUSA HASKE 000636245691498822226338096987 NIBSS Instant Payment Outward\"\n    },\n    {\n      \"date\": \"09-Mar-2017\",\n      \"reference\": \"000013170309113623000010650577\",\n      \"debit\": \"7,000.00\",\n      \"credit\": \"\",\n      \"balance\": \"28,134.82\",\n      \"remarks\": \"TO FB/CHUKWUALUKAILIEMENE REF:000013170309113623000010650577\"\n    },\n    {\n      \"date\": \"09-Mar-2017\",\n      \"reference\": \"000013170309113623000010650577\",\n      \"debit\": \"100.00\",\n      \"credit\": \"\",\n      \"balance\": \"28,034.82\",\n      \"remarks\": \"COMMISSION 000013170309113623000010650577 TO FB/CHUKWUALUKA ILIEMENE EF:000013170309113623000010650577\"\n    },\n    {\n      \"date\": \"09-Mar-2017"
+      },
+      "logprobs": null,
+      "finish_reason": "length"
+    }
+  ],
+  "usage": {
+    "queue_time": 0.05587446,
+    "prompt_tokens": 1816,
+    "prompt_time": 0.067859439,
+    "completion_tokens": 1500,
+    "completion_time": 4.285714286,
+    "total_tokens": 3316,
+    "total_time": 4.353573725
+  },
+  "usage_breakdown": {
+    "models": null
+  },
+  "system_fingerprint": "fp_2e0feca3c9",
+  "x_groq": {
+    "id": "req_01jqkkccp4fv29c3t2f9qy6jgr"
+  }
+}

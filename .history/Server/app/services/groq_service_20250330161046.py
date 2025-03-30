@@ -1,0 +1,68 @@
+import os
+import json
+import requests
+from fastapi import HTTPException
+
+# Store API key securely (use environment variables in production)
+GROQ_API_KEY = "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"
+GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+def process_groq_data(input_data: dict):
+    """
+    Sends input data to the Groq API and returns the processed response.
+    Includes detailed error handling and logging.
+    """
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    # Properly serialize the input data to avoid formatting issues
+    user_content = json.dumps(input_data, default=str)
+    
+    payload = {
+        "model": "mixtral-8x7b-32768",  # Using the full model name that you originally had
+        "messages": [
+            {"role": "system", "content": "Preprocess the data and extract necessary details for tax calculations."},
+            {"role": "user", "content": user_content}
+        ],
+        "temperature": 0.7,
+        "max_tokens": 500
+    }
+    
+    try:
+        print(f"Sending request to Groq with payload: {payload}")
+        response = requests.post(GROQ_API_URL, json=payload, headers=headers)
+        
+        # Get the response content regardless of status code
+        response_content = response.text
+        print(f"Groq API response status: {response.status_code}")
+        print(f"Groq API response content: {response_content}")
+        
+        # Then check status code and raise appropriate exception
+        if response.status_code != 200:
+            raise HTTPException(
+                status_code=response.status_code,
+                detail=f"Groq API error ({response.status_code}): {response_content}"
+            )
+            
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Request exception: {str(e)}")
+        if hasattr(e, 'response') and e.response:
+            print(f"Response content: {e.response.text}")
+            error_detail = f"{str(e)} - Response: {e.response.text}"
+        else:
+            error_detail = str(e)
+        raise HTTPException(status_code=500, detail=f"Groq API request failed: {error_detail}")
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+
+# If you need an async version of this function for use with FastAPI
+async def process_groq_data_async(input_data: dict):
+    """
+    Async wrapper for the Groq API service.
+    """
+    import asyncio
+    return await asyncio.to_thread(process_groq_data, input_data)
